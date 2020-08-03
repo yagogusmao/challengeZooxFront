@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-title>Nova cidade</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="city.name" name="name">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Estado</mat-label>
+            <mat-select [(ngModel)]="city.state_id" name="state">
+                <mat-option *ngFor="let state of states" [value]="state.value">
+                    {{state.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="updateCity()" color="primary">Salvar</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>
