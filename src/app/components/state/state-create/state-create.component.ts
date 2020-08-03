@@ -21,10 +21,10 @@ export class StateCreateComponent implements OnInit {
   }
 
   createState(): void {
-    this.stateService.create(this.state).subscribe(() => {
-      this.stateService.showMessage("Estado criado");
+    this.stateService.create(this.state).subscribe(res => {
+      this.stateService.showMessage(res.message);
       this.router.navigate(['/states']);
-    }, res => this.stateService.showMessage(res.error.message))
+    }, res => this.stateService.showMessage(res.error.message, true))
   }
 
   cancel(): void {

@@ -12,11 +12,12 @@ export class StateService {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
-  showMessage(message: string): void {
+  showMessage(message: string, error: boolean = false): void {
     this.snackBar.open(message, 'X', {
       duration: 3000,
       horizontalPosition: "right",
-      verticalPosition: "top"
+      verticalPosition: "top",
+      panelClass: error ? ["msg-error"] : ["msg-success"]
     })
   }
 
@@ -36,6 +37,11 @@ export class StateService {
   update(state: State): Observable<any> {
     const url = `${this.baseUrl}/${state._id}`;
     return this.http.put<any>(url, state)
+  }
+
+  delete(_id: string): Observable<any> {
+    const url = `${this.baseUrl}/${_id}`;
+    return this.http.delete<any>(url);
   }
 
 }
