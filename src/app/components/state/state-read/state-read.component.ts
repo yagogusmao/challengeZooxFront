@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class StateReadComponent implements OnInit {
 
   states: State[];
-  displayedColumns = ["_id", "name", "abbreviation", "action"];
+  displayedColumns = ["_id", "name", "abbreviation", "date_creation", "date_last_update", "action"];
 
   constructor(private stateService: StateService) { }
 

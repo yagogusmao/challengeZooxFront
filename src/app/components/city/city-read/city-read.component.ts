@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class CityReadComponent implements OnInit {
 
   cities: City[];
-  displayedColumns = ["_id", "name", "state", "action"];
+  displayedColumns = ["_id", "name", "state", "date_creation", "date_last_update", "action"];
 
   constructor(private cityService: CityService) { }
 
