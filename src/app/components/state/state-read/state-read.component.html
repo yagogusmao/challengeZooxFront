@@ -23,7 +23,7 @@
         <th mat-header-cell *matHeaderCellDef >Ação</th>
         <td mat-cell *matCellDef="let row">
             <a routerLink="/states/update/{{row._id}}"><i class="material-icons edit">edit</i></a>
-            <a routerLink=""><i class="material-icons delete">delete</i></a>
+            <a routerLink="/states/delete/{{row._id}}"><i class="material-icons delete">delete</i></a>
         </td>
       </ng-container>
   

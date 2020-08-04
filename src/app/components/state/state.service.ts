@@ -12,12 +12,11 @@ export class StateService {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
-  showMessage(message: string, error: boolean = false): void {
+  showMessage(message: string): void {
     this.snackBar.open(message, 'X', {
       duration: 3000,
       horizontalPosition: "right",
-      verticalPosition: "top",
-      panelClass: error ? ["msg-error"] : ["msg-success"]
+      verticalPosition: "top"
     })
   }
 

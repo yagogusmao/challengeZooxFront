@@ -1,3 +1,5 @@
+import { CityDeleteComponent } from './components/city/city-delete/city-delete.component';
+import { StateDeleteComponent } from './components/state/state-delete/state-delete.component';
 import { CityUpdateComponent } from './components/city/city-update/city-update.component';
 import { CityCreateComponent } from './components/city/city-create/city-create.component';
 import { CityCrudComponent } from './views/city-crud/city-crud.component';
@@ -30,6 +32,12 @@ const routes: Routes = [{
 }, {
   path: "cities/update/:_id",
   component: CityUpdateComponent
+}, {
+  path: "states/delete/:_id",
+  component: StateDeleteComponent
+}, {
+  path: "cities/delete/:_id",
+  component: CityDeleteComponent
 }];
 
 @NgModule({

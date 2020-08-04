@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-title>Deletar cidade</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput disabled placeholder="Nome" [(ngModel)]="city.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput disabled placeholder="Estado" [(ngModel)]="state" name="state">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteCity()" color="warn">Deletar</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>

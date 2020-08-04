@@ -24,7 +24,7 @@ export class StateCreateComponent implements OnInit {
     this.stateService.create(this.state).subscribe(res => {
       this.stateService.showMessage(res.message);
       this.router.navigate(['/states']);
-    }, res => this.stateService.showMessage(res.error.message, true))
+    }, res => this.stateService.showMessage(res.error.message))
   }
 
   cancel(): void {

@@ -44,4 +44,9 @@ export class CityService {
     return this.http.get<any>(url);
   }
 
+  delete(_id: string): Observable<any> {
+    const url = `${this.baseUrl}/${_id}`;
+    return this.http.delete<any>(url);
+  }
+
 }

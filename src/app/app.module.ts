@@ -32,6 +32,8 @@ import { CityCreateComponent } from './components/city/city-create/city-create.c
 import { CityCrudComponent } from './views/city-crud/city-crud.component';
 import { CityReadComponent } from './components/city/city-read/city-read.component';
 import { CityUpdateComponent } from './components/city/city-update/city-update.component';
+import { StateDeleteComponent } from './components/state/state-delete/state-delete.component';
+import { CityDeleteComponent } from './components/city/city-delete/city-delete.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { CityUpdateComponent } from './components/city/city-update/city-update.c
     CityCreateComponent,
     CityCrudComponent,
     CityReadComponent,
-    CityUpdateComponent
+    CityUpdateComponent,
+    StateDeleteComponent,
+    CityDeleteComponent
   ],
   imports: [
     BrowserModule,
